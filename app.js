@@ -18,3 +18,14 @@ let amigos = [];
     actualizarListaAmigos();
 }
 
+// Actualizar la lista
+function actualizarListaAmigos() {
+    const lista = document.getElementById('listaAmigos');
+    lista.innerHTML = ''; // Limpiar lista
+    
+    for (let amigo of amigos) {
+        const li = document.createElement('li');
+        li.textContent = amigo;
+        lista.appendChild(li);
+    }
+}
